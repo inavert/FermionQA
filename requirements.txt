@@ -1,14 +1,13 @@
-numpy >= 1.0.0
-pandas >= 1.0.0
-scipy >= 1.0.0
-sympy >= 1.0.0
-matplotlib >= 1.0.0
-qiskit >= 2.0.0
-qiskit_algorithms >= 0.1.0
-qiskit-nature >= 0.5.0
-qiskit_ibm_runtime >= 0.1.0
-cirq >= 1.0.0
-openfermion >= 0.9.0
-qsimcirq >= 0.1.0
-ipython >= 1.0.0
-ipykernel >= 1.0.0
+numpy
+pandas
+scipy
+sympy
+matplotlib
+qiskit
+qiskit_algorithms
+qiskit_ibm_runtime
+cirq
+openfermion
+qsimcirq
+ipython
+ipykernel
