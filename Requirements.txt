@@ -8,6 +8,7 @@ qiskit_algorithms
 qiskit_ibm_runtime
 cirq
 openfermion
+fqe
 qsimcirq
 ipython
 ipykernel
