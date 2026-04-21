@@ -7,9 +7,13 @@ logs/
 .vscode/
 .vscode
 .results*/
-.toml
 *.toml
 .DS_Store
+*.pickle
+*.log
+*.log.*
+*.cache
+.cache/
 
 # Environments
 .env
