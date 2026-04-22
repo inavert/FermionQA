@@ -1,5 +1,6 @@
 # FermionQA
 ## 環境・リポジトリ構成
+```
 FermionQA
 |
 |- .github: GitHub CI/CDパイプラインの設定
@@ -15,6 +16,7 @@ FermionQA
 |- lowcapital_notebook.ipynb: ライブラリの練習
 |
 |- Requirements.txt
+```
 
 ```bash zsh (ローカル/Python 仮想環境下で作業)
 git clone https://github.com/inavert/FermionQA.git
