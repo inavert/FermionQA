@@ -26,7 +26,7 @@ source .venv/bin/activate
 pip install -r Requirements.txt
 ```
 
-{{- Cirq, OpenFermion が、 Numpy の最新より少し古い版に依存している場合がある。その時は pip や実行時にエラーに出てきた版で再度 Numpy を入れ直す。}}
+- Cirq と OpenFermion は、Numpy の最新版より少し古い版に依存している場合があります。その場合は、pip のインストール時や実行時のエラーメッセージに出てきた版に合わせて Numpy を入れ直してください。
 
 ## [VQE on Hubbard model](./Hubbard.ipynb)
 ### references
@@ -44,7 +44,7 @@ VQE（Variational Quantum Eigensolver）は、変分原理を利用してハミ�
 基本的な操作は次のとおりです: 
 1. 問題のハミルトニアンを定義し、Ansatz 回路（初期パラメータを含む）を設計
 2. 現在のパラメータで量子状態 $|\psi(\theta)\rangle$ を準備
-3. ハミルトニアンを測定可能な項に分解し、ショット測定からエネルギー期待値 (と勾配) を推定
+3. ハミルトニアンを測定可能な項に分解し、ショット測定からエネルギー期待値と勾配を推定
 4. 古典計算の最適化アルゴリズム（例: BayesMGD, SPSA 等）で次のパラメータを更新
 5. 2〜4 を反復し、エネルギーが収束した時の最小期待値とパラメータを獲得
 
@@ -59,6 +59,27 @@ VQE（Variational Quantum Eigensolver）は、変分原理を利用してハミ�
 
 
 ### Hubbard model
+Hubbard model（Fermi-Hubbard model）は、電子の運動と同一サイトでのクーロン反発相互作用の競合を、最小限の自由度で記述します。
+
+
+一次元/二次元格子の Hubbard ハミルトニアンは次のように表記されます。
+
+$$
+H = -t \sum_{\langle i,j \rangle,\sigma}
+\left(c^{\dagger}_{i\sigma} c_{j\sigma} + c^{\dagger}_{j\sigma} c_{i\sigma}\right)
++ U \sum_i n_{i\uparrow} n_{i\downarrow}
+- \mu \sum_{i,\sigma} n_{i\sigma}
+$$
+
+ただし、
+- $c^{\dagger}_{i\sigma}, c_{i\sigma}$: サイト $i$、スピン $\sigma \in \{\uparrow,\downarrow\}$ の生成・消滅演算子
+- $n_{i\sigma}=c^{\dagger}_{i\sigma}c_{i\sigma}$: 粒子数演算子
+- $t$: 最近接サイト間のホッピングの振幅（運動エネルギーの大きさ）
+- $U$: クーロン相互作用（同じサイトに 2 粒子が入るコスト）
+- $\mu$: 化学ポテンシャル（粒子数制御）
+とします。
+
+
 
 
 ### review
