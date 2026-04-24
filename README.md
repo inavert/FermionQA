@@ -64,16 +64,16 @@ Hubbard model（Fermi-Hubbard model）は、電子の運動と同一サイトで
 
 一次元/二次元格子の Hubbard ハミルトニアンは次のように表記されます。
 
-$$
+```math
 H = -t \sum_{\langle i,j \rangle,\sigma}
 \left(c^{\dagger}_{i\sigma} c_{j\sigma} + c^{\dagger}_{j\sigma} c_{i\sigma}\right)
 + U \sum_i n_{i\uparrow} n_{i\downarrow}
 - \mu \sum_{i,\sigma} n_{i\sigma}
-$$
+```
 
 ただし、
-- $c^{\dagger}_{i\sigma}, c_{i\sigma}$: サイト $i$、スピン $\sigma \in \{\uparrow,\downarrow\}$ の生成・消滅演算子
-- $n_{i\sigma}=c^{\dagger}_{i\sigma}c_{i\sigma}$: 粒子数演算子
+- $c^{\dagger}\_{i \sigma}, c\_{i \sigma}$: サイト $i$、スピン $\sigma \in \\{\uparrow,\downarrow\\}$ の生成・消滅演算子
+- $n\_{i\sigma}=c^{\dagger}\_{i\sigma}c\_{i\sigma}$: 粒子数演算子
 - $t$: 最近接サイト間のホッピングの振幅（運動エネルギーの大きさ）
 - $U$: クーロン相互作用（同じサイトに 2 粒子が入るコスト）
 - $\mu$: 化学ポテンシャル（粒子数制御）
